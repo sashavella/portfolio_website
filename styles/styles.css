@@ -1,0 +1,197 @@
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  padding-top: 100px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 25px;
+}
+
+.container {
+  margin-bottom: 50px;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  padding: 0 5%;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+}
+
+.nav-item {
+    list-style: none;
+    margin-left: 5%;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu {
+  border: 0px;
+  border-radius: 0;
+  padding: 21px 11px;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 5px 0;
+}
+
+.nav-item a {
+    color: inherit;
+}
+
+.carousel {
+    margin: 50px auto;
+    height: 500px;
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #ffffff;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.text-white-50 { color: rgba(255, 255, 255, .5); }
+
+/* https://stackoverflow.com/questions/40442683/owl-carousel-2-nav-on-sides/40449552 */
+.owl-prev {
+  /* width: 41px; */
+  /* height: auto; */
+  position: absolute;
+  top: 40%;
+  margin-left: -20px;
+  display: block !important;
+  border: 0px solid black;
+}
+
+.owl-next {
+  /* height: 100px; */
+  position: absolute;
+  top: 40%;
+  right: -25px;
+  display: block !important;
+  border: 0px solid black;
+}
+
+.owl-prev i, .owl-next i {
+  transform : scale(2,2); 
+  color: #ccc;
+}
+
+.card {
+  border: 0px;
+}
+
+.offcanvas-collapse.open {
+  margin-top: 40px;
+}
+
+.nav_item {
+  transition: background-color 1s;
+}
+
+.offcanvas-collapse .nav-item {
+  border-radius: 12px;
+  margin-bottom: 15px;
+  padding: 8px 0;
+}
+
+.nav-item:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.page_title {
+  text-transform: uppercase;
+  margin: 65px auto;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.sasha_img {
+  height: 500px;
+}
+
+.sasha_about {
+  font-size: 14px;
+  color: rgb(75, 75, 75);
+  margin-top: 12%;
+  line-height: 31px;
+}
+
+.sasha_about p {
+  padding-right: 25%;
+}
+
+.contact_details h2 {
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact_details div {
+  margin-bottom: 25px;
+}
+
+.contact_details i {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.contact_details a {
+  color: rgb(70, 70, 70);
+  text-decoration: none;
+}
