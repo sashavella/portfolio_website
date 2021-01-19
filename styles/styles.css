@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html,
 body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
@@ -61,11 +68,17 @@ body {
     overflow-y: auto;
     visibility: hidden;
     background-color: #ffffff;
+    -webkit-transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out, visibility .3s ease-in-out;
     transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
   }
   .offcanvas-collapse.open {
     visibility: visible;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
@@ -77,8 +90,11 @@ body {
 }
 
 .nav-scroller .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding-bottom: 1rem;
   margin-top: -1px;
   overflow-x: auto;
@@ -127,7 +143,9 @@ body {
 }
 
 .owl-prev i, .owl-next i {
-  transform : scale(2,2); 
+  -webkit-transform : scale(2,2);
+      -ms-transform : scale(2,2);
+          transform : scale(2,2); 
   color: #ccc;
 }
 
@@ -140,6 +158,8 @@ body {
 }
 
 .nav_item {
+  -webkit-transition: background-color 1s;
+  -o-transition: background-color 1s;
   transition: background-color 1s;
 }
 
@@ -194,4 +214,51 @@ body {
 .contact_details a {
   color: rgb(70, 70, 70);
   text-decoration: none;
+}
+
+/* IMAGE GALLERY */
+/* https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
+
+.gallery_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.gallery_column {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.gallery_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .gallery_column {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gallery_column {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    max-width: 100%;
+  }
 }
